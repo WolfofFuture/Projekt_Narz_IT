@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          ./installResources.ps1
+          ./instalujResourcesy.ps1
 
       - name: Build app with PyInstaller
         run: |
