@@ -18,9 +18,9 @@ if __name__ == "__main__":
 
         file_path = Path(input_file)
         if not file_path.exists():
-            raise ValueError("Podany plik nie istnieje.")
+            raise ValueError("Podany plik nie istnieje!")
         elif not file_path.is_file():
-            raise ValueError("Podana ścieżka nie prowadzi do pliku.")
+            raise ValueError("Podana ścieżka nie prowadzi do pliku!")
 
         file_extension = file_path.suffix.lower()
         valid_extensions = [".xml", ".json", ".yml", ".yaml"]
