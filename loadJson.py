@@ -19,7 +19,7 @@ def load_json_data(file_path):
             data = json.loads(json_content)
             return data
         except FileNotFoundError:
-            print("Podany plik nie istnieje")
+            print("Podany plik nie istnieje!")
         except json.JSONDecodeError as e:
             print("Błąd wczytywania danych JSON:", file_path)
         except Exception as e:
