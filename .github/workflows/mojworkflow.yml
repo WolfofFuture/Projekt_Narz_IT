@@ -33,9 +33,19 @@ jobs:
           python -m pip install --upgrade pip
           ./instalujResourcesy.ps1
 
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: refs/heads/Task-8
+          
       - name: Build app with PyInstaller
         run: |
           pyinstaller --onefile --hidden-import=yaml,xmltodict apka-z-UI.py
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: refs/heads/Task-0
 
       - name: Archive compiled app
         uses: actions/upload-artifact@v3
